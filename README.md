@@ -1,1 +1,1 @@
-# NEXMII Lab Website\n\nNext Generation Maternal Infant Informatics Laboratory Website
+# NEXMII Lab Website\n\n Next Generation Maternal Infant Informatics Laboratory Website
