@@ -34,12 +34,14 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
 .logo img {
-    height: 50px;
+    height: 60px;
     width: auto;
+    object-fit: contain;
+    border-radius: 0;
 }
 
 .logo span {
@@ -81,24 +83,16 @@ section {
 }
 
 .hero {
-    min-height: 100vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: #f8f9fa;
-    padding-top: 80px;
+    padding-top: 100px;
+    padding-bottom: 3rem;
     border-bottom: 1px solid #e1e1e1;
-}
-
-.hero-logo {
-    margin-bottom: 2rem;
-}
-
-.hero-logo img {
-    max-width: 180px;
-    height: auto;
 }
 
 .hero h1 {
@@ -125,6 +119,71 @@ section {
     margin: 0 auto;
     line-height: 1.7;
     font-weight: 300;
+}
+
+/* Research Domain Icons */
+.research-domains {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.domain-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.domain-item:hover {
+    transform: translateY(-5px);
+}
+
+.domain-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1a365d, #4299e1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.domain-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.domain-item span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4a5568;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .research-domains {
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .domain-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .domain-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .domain-item span {
+        font-size: 0.8rem;
+    }
 }
 
 #research {
@@ -427,4 +486,190 @@ footer {
 footer p {
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.9rem;
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #1a365d;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.social-link:hover {
+    background: #4299e1;
+    transform: translateY(-3px);
+}
+
+/* Mobile Navigation */
+.mobile-menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-icon {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #1a365d;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        height: auto;
+        padding: 1rem 0;
+    }
+    
+    nav ul li {
+        margin: 1rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero h2.lab-full-name {
+        font-size: 1.5rem;
+    }
+    
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .social-links {
+        margin-top: 2rem;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Funding Section */
+.funding-section {
+    background-color: #f8f9fa;
+    padding: 5rem 0;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.funding-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.funding-item {
+    background: white;
+    border: 1px solid #e1e1e1;
+    border-left: 5px solid #1a365d;
+    border-radius: 4px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.funding-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+}
+
+.funding-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+}
+
+.funding-title {
+    font-family: 'Lora', serif;
+    font-size: 1.3rem;
+    color: #1a365d;
+    font-weight: 600;
+}
+
+.funding-amount {
+    background: #1a365d;
+    color: white;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.funding-period {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+.funding-role {
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.funding-agency {
+    color: #4a5568;
+    font-style: italic;
+    margin-bottom: 0.8rem;
+}
+
+.funding-description {
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+.funding-project-title {
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.8rem;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .funding-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .funding-amount {
+        align-self: flex-start;
+    }
 }
